@@ -177,7 +177,26 @@ body {
 .btn:hover {
   background-color: #e9bb24;
 }
-
+.close {
+  /* position: absolute; */
+  top: 16px;
+  left: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid;
+  padding: 1px 10px;
+  border-radius: 16px;
+  transition: all 500ms ease-out;
+}
+.close:hover {
+  color: #7950f2;
+  background-color: white;
+  transition: all 500ms ease-out;
+  font-weight: bold;
+}
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128

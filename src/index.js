@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import Close from "./components/close";
 import "./index.css";
 
 const pizzaData = [
@@ -48,12 +49,19 @@ const pizzaData = [
 ];
 
 function App() {
+  const [isClosed, setIsClosed] = useState(true);
+
   return (
-    <div className="container">
-      <Header />
-      <Menu />
-      <Footer />
-    </div>
+    <>
+      <Close isClosed={isClosed} setIsClosed={setIsClosed} />
+      {isClosed && (
+        <div className="container">
+          <Header />
+          <Menu />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 
